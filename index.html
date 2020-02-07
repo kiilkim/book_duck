@@ -4,77 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Book_duck</title>
-    <link href="bookCss.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+    <link href="frameCss.css" rel="stylesheet" type="text/css">
+
 
 </head>
 <body>
-    <!--head-->
-    <div class="left">
-        <p>
-        <img src="img/title.jpg" width="100" height="100">
-
-        </p>
-    </div>
-        
-    <div class="main">
-        <p>
-           
-            <ul>
+    
+        <div class="topnav">
             <script>
+        
                 var lists = ["main","genre","insight","visitor","footer"];
                 var i = 0;
-
-             while(i<lists.length) {
-
-            
-            document.write("<li class='head-li'><a href='"+lists[i]+".html'>"+lists[i]+"</a></li>");
-
-            i++;
-
-            }
-                
+        
+                while(i<lists.length) {
+        
+                    
+                    document.write("<li class='head-li'><a href='#nav_"+lists[i]+"'>"+lists[i]+"</li>");
+        
+                    i++;
+        
+                }
             </script>
-            </ul>
 
-        </p>
-    </div>
-
-    <div class="right">
-        <p>
-            <a href="visitor.html"><img src="img/question.jpg"></a>
-        </p>
-    </div>
+       <!--    <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a> -->
+        </div>
+        
+        <div id="nav_main">
+            <p>img slide/gathering objection/login/opinionshare</p>
+            <div class="main_vision">
+                <p class="vision_p">
+                    작은 공간에서의 신뢰, 그 출발은 독서
+                </p>
+            </div>
+        </div>
     
-    <!--nav - main : 목적, 모임사진 배경, 슬라이드, -->
-    <div class="nav_main">
-        <p>img slide/gathering objection/login/opinionshare</p>
-    </div>
-
-    <!--nav - genre : 장르 여러개 , 카드 모양, 슬라이드, -->
-
-    <div class="nav_genre">
-        <p>genre card frame </p>
-
-    </div>
-
-    <!--nav - visitor writing for revising -->
-    <div class="nav_visitor">
-        <p>visitors writing</p>
-    </div>
-
-    <div class="nav_insight">
-        <p>visitors writing</p>
-    </div>
-
-    <!--nav - footer for other links ex) facebook, instar, tistory et-->
-    <div class="nav_footer">
-        <p>other links ex)facebook, blog et</p>
-    </div>
-
-
-
-    <script src="bookScript.js"></script>
+        <!--nav_genre : 장르 여러개 , 카드 모양, 슬라이드, -->
+    
+        <div id="nav_genre" >
+            <p>genre card frame </p>
+    
+        </div>
+    
+        <!--nav_insight : 나만의 인사이트 게시판 -->
+    
+        <div id="nav_insight">
+            <p>my insight</p>
+        </div>
+    
+        
+        <!--nav_visitor writing for revising ,visistor's insight-->
+        <div id="nav_visitor">
+            <p>visitors writing</p>
+        </div>
+    
+      
+        
+        <div id="nav_footer">
+          <p>Footer</p>
+        </div>
+        
+     
+    
 </body>
+
 
 </html>

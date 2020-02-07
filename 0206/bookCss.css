@@ -1,42 +1,95 @@
 * {
     box-sizing:border-box;
   }
+/*head*/
+
+  body {
+   /*  background-color:#f4e1d2 ; 색은 따뜻한데,, */
+  }
+
+  .titleUp {
+    font-size: xx-large;
+    text-align: center;
+    background-color:white;
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 60px;
+  }
   
   .left {
-    background-color:#2196F3;
+    text-align: center;
+    /* border: 1px solid black; */
+   /*  background-color:#b2b2b2; */
     padding:20px;
     float:left;
     width:20%; /* The width is 20%, by default */
-   
+    height: 174px;
   }
-  
+
   .main {
-    background-color:#f1f1f1;
+    text-align: center;
+    background-color:white;
     padding:20px;
     float:left;
     width:60%; /* The width is 60%, by default */
-    height: 176px;
+    height: 174px;
+    border: 1px solid black;
   }
-  
+  .main_vision {
+    border: 1px solid black;
+    width: 700px;
+    float: left;
+    margin: 50px; 
+    /* padding: 70px; margin 해야 내랑 의도 비슷 */
+    height: 150px;
+  }
+  .vision_p {
+    margin:50px;
+    color:black;
+    font-size: x-large;
+  }
+
   .right {
-    background-color:#4CAF50;
+    text-align: center;
+    background-color:#b2b2b2;
     padding:20px;
     float:left;
     width:20%; /* The width is 20%, by default */
-    height: 176px;
+    height: 174px;
+    border: 1px solid black;
   }
  
   ul {
-    list-style: none;
-
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
   }
 
+  a:link {
+    color: black;
+    text-decoration: none;
+    display: block;
+    background-color: white;
+  }
+
+  a:hover {
+    background-color: whitesmoke;
+  }
+
+
   .head-li {
+    
+    display: block;
+    font-size: x-large;
     float: left;
     outline: 1px soild black ;
     margin-left: 20px;
+    text-decoration: none;
   }
 
+/*main*/
 
   .nav_main {
       border: 1px solid black ;
@@ -45,7 +98,7 @@
       height: 500px; 
   }
   
-  
+/*genre*/
   .nav_genre {
       border: 1px solid black ;
       color: beige;
@@ -53,7 +106,8 @@
       height: 500px;
 
   }
-  
+
+/*visitor*/
   .nav_visitor {
       border: 1px solid black ;
       color:gray;
@@ -61,6 +115,7 @@
       height: 500px;
   }
 
+/*insight*/
   .nav_insight {
     border: 1px solid black ;
     color:gray;
@@ -68,7 +123,7 @@
     height: 500px;
    }
 
-
+/*footer*/
   .nav_footer {
       border: 1px solid black ;
       color: black;
