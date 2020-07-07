@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="0707js.js"></script>
+    <script>
+
+    function myFunction() {
+        document.getElementById('demo').innerHTML="paragraph changed.";
+    }
+    </script>
+</head>
+<body>
+
+    <h2>What Cas Js Do?</h2>
+
+    <p id="demo"></p>
+    <script>
+        document.getElementById('demo').innerHTML="My first JS"
+    </script>
+
+    <button type="button"
+    onclick="myFunction()">
+        click me!
+    </button>
+
+
+    <p>유엔기념공원 사진두개!</p>
+
+    <button type="button" onclick="document.getElementById(
+    'myImg').src='un2.png'">다음이미지</button> 
+
+    <img id="myImg" src="un1.png" style="width: 100px">
+    
+    <button type="button" onclick="document.getElementById('myImg').src='un1.png'">
+    원래이미지
+    </button>
+
+
+    <p id="demo2">js can change the style of an Html element,</p>
+
+    <button type="button" 
+    onclick="document.getElementById('demo2').style.fontSize='35px'">
+    Click me</button>
+
+    <p>js can show hidden Html elements.</p>
+
+    <img src="un1.png" width="100px">
+    <p id ="demo3" style="display:none">
+    
+        유엔공원은 6.25 전쟁 추모를 하기 위해 만들어진 공간입니다.
+
+    </p>
+    <p></p>
+    <button type="button"
+    onclick="document.getElementById('demo3').style.display='block'">
+    설명보기
+    </button>
+
+    <p>외부 파일 연결</p>
+
+    <p id="prac1">external js</p>
+    <button type="button" onclick="change1()">변환1</button>
+
+    <h2>innerHTML</h2>
+    <p id ="prac2"> </p>
+
+    <script>
+        document.getElementById('prac2').innerHTML=5+6 +' 5+6 바로계산';
+    </script>
+
+    <h2>document.write()쓰기</h2>
+
+    <script>document.write(5+6)</script>
+
+    <button type="button" onclick="document.write(5+6)">
+    try it!</button>
+    
+    <p>document.write() 는 보통 테스트를 위해서 사용</p>
+
+    
+    <h2>alert 쓰기</h2>
+    
+    <script>
+        alert(5+6);
+    </script>
+
+    <script>
+        console.log(5+6)
+    </script>
+
+    <button onclick="window.print()">Print this page</buttton>
+
+        
+
+</body>
+</html>
