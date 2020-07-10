@@ -61,11 +61,11 @@
 def print_choice():
     choice = input(""" 
     작업할 메뉴를 고르시오
-    1. 관상어 정보 입력
-    2. 관상어 검색
-    3. 관상어 정보 수정
-    4. 관상어 정보 삭제
-    5. 프로그램 종료
+    1 - 관상어 정보 입력
+    2 - 관상어 검색
+    3 - 관상어 정보 수정
+    4 - 관상어 정보 삭제
+    5 - 프로그램 종료
     """).upper()
     print(choice)
     return choice
@@ -75,8 +75,9 @@ def print_choice():
 #선택 어떻게 했더라? choice
  
 def modify_fish():
+
     fish = {
-        "name": "", "celcius":o, "ph":0,"n":0
+        "name": " ", "celcius":0, "ph":0,"n":0
     }
 
     while True:
@@ -91,47 +92,70 @@ def modify_fish():
 
         ph = input("ph를 입력하세요.")
 
+    fish["name"] = name
+    fish["celcius"] = celcius
+    fish["ph"] = ph
+    fish["n"] = n
+
+    return fish
+
+def print_fish(cust_fish, current):
+    print("이름 : ", cust_fish[current]["name"])
+    print("celcius : ", cust_fish[current]["celcius"])
+    print("ph : ", cust_fish[current]["ph"])
+    print("n : ", cust_fish[current]["n"])
+
+def delete_fish(fish_list, current):
+    del fish_list[current]
+    if current == len(fish_list):
+        current -=1
+    return current
+
+
 #만약 input에 1번이 입력되었다면, 정보입력할 수 있는 칸과, 그것을 저장하여 리스트에 넣어야 함.
-fishChar = []
-current = -1
 
-fish_char = {
-    "name":" "
-}
+def main():
+    fish_list = []
+    current = -1
 
-while True:
+    while True:
 
-    print(choice)
+        choice = print_choice()
 
-    if choice == 1:
-        print("물고기 정보 입력합니다.")
-        fishChar.append(fish_Char)
-        print(current)
+        if choice == 1:
+            print("물고기 정보 입력합니다.")
+            fish_list.append(modify_fish())
+            current = len(fish_list)-1
+            print(current)
 
-    elif choice == 2:
-        print("관상어 검색합니다.")
+        elif choice == 2:
+            print("관상어 검색합니다.")
 
-        if current>=0:
-            print(fish_Char, current)
+            if current >= 0:
+                print_fish(fish_list, current)
+            else:
+                print("물고기 정보가 없습니다.")
+                
+        
+        elif choice == 3:
+            print("물고기 정보를 수정합니다.")
+            fish_list[current] = modify_fish()
+
+        elif choice == 4:
+            print("물고기 정보를 삭제합니다.")
+            current = delete_fish(fish_list, current)
+            print(current)
+
+        elif choice == 5:
+            print("프로그램을 종료합니다.")
+            break
+
+
         else:
-            print("물고기 정보가 없습니다.")
-            
-    
-    elif choice == 3:
-        print("물고기 정보를 수정합니다.")
-        pass
+            print("메뉴를 정확히 입력해 주세요,")
 
-    elif choice == 4:
-        print("물고기 정보를 삭제합니다.")
-        pass
-    elif choice == 5:
-        print("프로그램을 종료합니다.")
-
-
-    else:
-        print("메뉴를 정확히 입력해 주세요,")
-
-
+if __name__ == "__main__":
+    main()
 
 
 

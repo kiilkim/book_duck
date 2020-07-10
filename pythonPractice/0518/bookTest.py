@@ -45,3 +45,7 @@ a.setdata(4,2)
 b.setdata(3,8)
 
 print(a.add())
+
+
+a = (1,2,3)
+
